@@ -26,7 +26,7 @@ jobs:
       - checkout
       - ruby/install-deps
       - run:
-          command: 'bundle exec rake db:schema:load --trace'
+          command: 'bundle exec rake db:create db:schema:load --trace'
           name: Database setup
       - ruby/rspec-test
 
